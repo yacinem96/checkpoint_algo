@@ -1,0 +1,28 @@
+ALGORITHM tache1
+
+VAR 
+    i,cpt_voy,cpt_mot:INTEGER:=0;
+    
+    str:ARRAY_OF_CHAR[100];
+    voy:
+
+BEGIN
+    Write("Ecrivez une phrase");
+    REPEAT
+        Read(str);
+    UNTIL (str<>".")
+    
+    FOR i FROM 0 TO str.length STEP 1  DO
+
+        IF (str[i]==" ") THEN
+            cpt_mot:=cpt_mot+1;
+        ELSE_IF(str[i]=="a" OR str[i]=="e" OR str[i]=="y" OR str[i]=="u"OR str[i]=="i" OR str[i]=="o")THEN
+            cpt_voy:=cpt_voy+1;
+        
+        END_IF
+
+    END_FOR
+        cpt_mot:=cpt_mot+1;
+
+
+END
